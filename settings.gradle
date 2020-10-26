@@ -1,0 +1,3 @@
+rootProject.name = 'planner'
+include(':webapp')
+project(':webapp').projectDir = new File('src/webapp')
