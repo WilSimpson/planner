@@ -20,5 +20,9 @@ jobs:
         java-version: 11
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle
+    - name: Building backend
       run: ./gradlew build
+    - name: Building frontend
+      run: ./gradlew buildAngularApp
+    - name: Importing frontend
+      run: ./gradlew importStaticWebApp
