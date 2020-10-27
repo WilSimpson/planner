@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class DatabaseLoader implements CommandLineRunner
 {
@@ -34,10 +36,19 @@ public class DatabaseLoader implements CommandLineRunner
             }
         }
 
-        User wil = new User("wil", "wil", "wil@wildev.me", getRole(ERole.ADMIN));
+        List<User> defaultUsers = List.of(
+            new User("wil", "wil", "wil@wildev.me", getRole(ERole.ADMIN)),
+            new User("bob", "bob", "bob@wildev.me", getRole(ERole.USER)),
+            new User("tom", "tom", "tom@wildev.me", getRole(ERole.USER)),
+            new User("tim", "tim", "tim@wildev.me", getRole(ERole.ADMIN)),
+            new User("sam", "sam", "sam@wildev.me", getRole(ERole.USER))
+        );
 
-        if(userRepository.findByUsername("wil").isEmpty())
-            this.userRepository.save(wil);
+        for(User defaultUser : defaultUsers)
+        {
+            if(userRepository.findByUsername(defaultUser.getUsername()).isEmpty())
+                userRepository.save(defaultUser);
+        }
     }
 
 
