@@ -9,7 +9,7 @@ An app to help you plan your week. Given a list of tasks defined by a due date, 
 This application consists of a frontend built in angular and a backend built in Java using Spring Boot API. The API is run on /api/v1/ where all request need to be authenticated unless /api/v1/login or /api/v1/register are called.
 
 ### Login
-A request should be made to /api/v1/login with the body containing JSON formatted as seen below where "<GIVEN USERNAME>" and "<GIVEN PASSWORD>" are the given username and password for the login request. Upon a successful login request, a JWT token will be sent for all future authentications. An error message will be sent if the request is unsuccessful.
+A request should be made to /api/v1/login with the body containing JSON formatted as seen below where "\<GIVEN USERNAME\>" and "\<GIVEN PASSWORD\>" are the given username and password for the login request. Upon a successful login request, a JWT token will be sent for all future authentications. An error message will be sent if the request is unsuccessful.
 
 ```JSON
 {
