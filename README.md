@@ -1,7 +1,7 @@
 # Planner App
 An app to help you plan your week. Given a list of tasks defined by a due date, priority and estimated completition time, this app will generate an optimized schedule to get things done on top and help prevent procrastination. Customization options include:
 
-* Unavailable times (Work/class schedule, sleep, free-time)
+* Unavailable times (Work/class, sleep, free-time)
 * Time between tasks
 * Repeating tasks
 
