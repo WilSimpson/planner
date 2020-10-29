@@ -27,7 +27,7 @@ All possible roles are: USER, ADMIN
 {
   "username": "<GIVEN USERNAME>",
   "password": "<GIVEN PASSWORD>",
-  "email": <GIVEN EMAIL>""
+  "email": "<GIVEN EMAIL>"
 }
 ```
 
